@@ -8,7 +8,7 @@ from langchain_groq import ChatGroq
 from ingest import load_vectorstore
 load_dotenv()
 
-llm= ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+llm= ChatGroq( model="openai/gpt-oss-20b", temperature=0)
 tavily= TavilyClient(api_key=os.environ.get("TAVILY_API_KEY"))
 
 max_retries= 2
